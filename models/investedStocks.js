@@ -8,5 +8,5 @@ const investedStocksSchema = new Schema({
   label: Date,
   close: String
 });
-const investedStocks = mongoose.model("InvestedStocks", investedStockSchema);
+const investedStocks = mongoose.model("InvestedStocks", investedStocksSchema);
 module.exports = investedStocks;

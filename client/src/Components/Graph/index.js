@@ -18,33 +18,36 @@ function Graph() {
 
   function gatherInfo() {
     console.log("in gatherInfo");
+    // create a list pulling from data base
+    var stockList = ["AAPL","TSLA"];
     // create a list of results,
+    var resList = [];
     // props.firstItem for "AAPL"
     // push aaplResults to list
-    // var resList = [];
-    //  for (var i = 0; i < sizeOfStockList; i++){
-    // queryByHistorical(stockListName).then(res=>{
-    // resList.push({name : stockListName, data:res.data});
-    // })
-    // }
-    // formatData(res);
-    queryByHistorical("AAPL").then(aaplResults => {
-      // props.secondItem
-      queryByHistorical("TSLA").then(tslaResults =>{
-        formatData([
-          {
-          name: "appl",
-          data: aaplResults.data
-        },
-          {
-            name: "tsla",
-            data: tslaResults.data
-          }
-        ])
-      })
-    });
+
+     for (var i = 0; i < sizeOfStockList; i++){
+    queryByHistorical(stockListName).then(res=>{
+    resList.push({name : stockListName, data:res.data});
+    })
+    }
+    formatData(res);
+    // queryByHistorical("AAPL").then(aaplResults => {
+    //   // props.secondItem
+    //   queryByHistorical("TSLA").then(tslaResults =>{
+    //     formatData([
+    //       {
+    //       name: "appl",
+    //       data: aaplResults.data
+    //     },
+    //       {
+    //         name: "tsla",
+    //         data: tslaResults.data
+    //       }
+    //     ])
+    //   })
+    // });
     // console.log(dataset1);
-    const dataset2 = queryByHistorical("TSLA");
+    // const dataset2 = queryByHistorical("TSLA");
   }
 
   function queryByHistorical(symbol) {
