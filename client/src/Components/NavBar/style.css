@@ -1,0 +1,10 @@
+.nav{
+    background-color: blue;
+    
+}
+
+.nav-item {
+    margin: 20px;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
