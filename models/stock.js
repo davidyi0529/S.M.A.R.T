@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
 const stocksSchema = new Schema({
   symbol: { type: String, required: true },
   companyName: String,
@@ -9,7 +8,6 @@ const stocksSchema = new Schema({
   label: Date,
   close: String
 });
-
 const Stocks = mongoose.model("Stocks", stockSchema);
 
 module.exports = Stocks;
