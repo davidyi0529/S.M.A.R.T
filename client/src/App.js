@@ -7,6 +7,7 @@ import MyInvestments from "./pages/myInvestments";
 // import Card from "./Components/Card";
 // import List from "./Components/List";
 import Navbar from "./Components/NavBar"
+import Jumbotron from './Components/Jumbotron';
 // import Footer from "./Components/Footer"
 
 
