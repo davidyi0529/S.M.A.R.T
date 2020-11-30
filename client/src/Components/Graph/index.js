@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import CanvasJSreact from "./canvasjs.react";
 import { iex } from "../../utils/iex.js";
 import axios from "axios";
-import { apihelper } from "../../utils/apiHelper.js"
 // import GraphPartial from "../GraphPartial"
 var CanvasJS = CanvasJSreact.CanvasJS;
 var CanvasJSChart = CanvasJSreact.CanvasJSChart;
