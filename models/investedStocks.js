@@ -10,5 +10,6 @@ const investedStocksSchema = new Schema({
   close: String
 });
 
-const investedStocks = mongoose.model("InvestedStocks", investedStockSchema);
+const investedStocks = mongoose.model("InvestedStocks", investedStocksSchema);
+
 module.exports = investedStocks;
