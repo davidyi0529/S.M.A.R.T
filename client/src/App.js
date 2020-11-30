@@ -8,7 +8,7 @@ import MyInvestments from "./pages/myInvestments";
 // import List from "./Components/List";
 import Navbar from "./Components/NavBar"
 import Jumbotron from './Components/Jumbotron';
-// import Footer from "./Components/Footer"
+import Footer from "./Components/Footer"
 
 
 // after successful log in
@@ -32,7 +32,7 @@ function App() {
               <WatchList />
             </Route>
           </Switch>
-
+          <Footer />
         </Router>
       </div>
     </>

@@ -2,11 +2,11 @@ import React from "react";
 import "./style.css";
 
 function Footer() {
-    return ( 
-        <footer className="footer">
-            <h1>@Copyright SFC</h1>
-        </footer>
+    return (
+        <div className="navbar navbar-light justify-content-center bg-secondary fixed-bottom">
+            <div className=" text-white">@MIT 2020 Daniel, David, Brian, Jefry</div>
+        </div>
     );
-}
+};
 
-export default Footer;
+export default Footer; 

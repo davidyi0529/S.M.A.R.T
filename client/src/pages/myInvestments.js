@@ -10,7 +10,7 @@ function MyInvestments(props) {
 
 
 
-        <Footer />
+        
         </>
 
     );
