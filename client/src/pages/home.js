@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Graph from "../Components/Graph"
 // import React from 'react';
 // import axios from "axios"
-// import Table from "../Components/Table";
 import Table from "../Components/Table";
 // import Results from "../Components/Results";
-import SearchForm from "../Components/SearchForm";
+import SearchForm from "../Components/searchform";
+import Jumbotron from "../Components/Jumbotron"
 // import Saved from "../Components/Saved"
 import apiStocks from '../utils/apiStocks'
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css";
 
 function Home() {
 
@@ -63,20 +64,30 @@ function Home() {
 //   };
 
   return (
-    <div className="home">
-      <div className="Container">
-        <SearchForm 
+    <div className="container">
+    <div className="row">
+      <div className="col">
+        <Jumbotron />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col">
+       <SearchForm 
         handleFormSubmit={handleFormSubmit}
         searchStocks={searchStocks}
         />
-         {/* <Saved
-                data={stocks}
-                saveStock={saveStock}
-            /> */}
-        <Table />
       </div>
-      <Graph /> 
-    </div >
+    </div>
+    <div className="row bg-white">
+      <div className="col">
+        <Table />
+       </div>
+       <div className="col">
+         <Graph />
+       </div>
+    </div>
+   <div/>
+</div >
   );
 };
 
