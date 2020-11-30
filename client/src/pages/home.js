@@ -7,6 +7,7 @@ import TableBody from "../Components/TableBody";
 // import List from "../Components/List";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Jumbotron from '../Components/Jumbotron';
+import "./style.css";
 
 // const Home = () => {
 //   const [data, setData] = useState({
@@ -26,39 +27,38 @@ import Jumbotron from '../Components/Jumbotron';
 //   }, []);
 function Home() {
   return (
-    <div className="Home">
-      <Jumbotron />
-      <div className="Container">
-        <table className="table mt-5">
-          <thead>
-            <tr>
-              <th >Symbol</th>
-              <th >Close</th>
-              <th >Date</th>
-              <th >Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <TableBody ticker="AAPL" />
-            <TableBody ticker="GOOG" />
-            <TableBody ticker="MSFT" />
-            <TableBody ticker="TSLA" />
-          </tbody>
-        </table>
-      </div>
-      <Graph /> 
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <Jumbotron />
+          </div>
+        </div>
+        <div className="row bg-white">
+          <div className="col">
+             <table className="table mt-5">
+               <thead>
+                <tr>
+                 <th >Symbol</th>
+                 <th >Close</th>
+                 <th >Date</th>
+                 <th >Time</th>
+                </tr>
+               </thead>
+               <tbody>
+                <TableBody ticker="AAPL" />
+                <TableBody ticker="GOOG" />
+                <TableBody ticker="MSFT" />
+                <TableBody ticker="TSLA" />
+               </tbody>
+             </table>
+           </div>
+           <div className="col">
+             <Graph />
+           </div>
+        </div>
+       <div/>
     </div >
-    /* <ul>
-      {data.Open.map((item, index) =>
-        <li key={index}>{JSON.stringify(item)}</li>
-      )};
-    </ul> */
-    /* <Table />
-    <List>
-      {data.Open.map(data => (
-        <TableBody key={data._id} item={data}/>  
-      ))}
-    </List> */
+   
   );
 }
 
