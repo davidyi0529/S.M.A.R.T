@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const stocksSchema = new Schema({
+const investedStocksSchema = new Schema({
   symbol: { type: String, required: true },
   companyName: String,
   exchange: { type: String, required: true },
@@ -10,6 +10,6 @@ const stocksSchema = new Schema({
   close: String
 });
 
-const Stocks = mongoose.model("Stocks", stockSchema);
+const investedStocks = mongoose.model("InvestedStocks", stockSchema);
 
-module.exports = Stocks;
+module.exports = investedStocks;
