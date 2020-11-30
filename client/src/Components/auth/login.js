@@ -68,16 +68,7 @@ export default class Registration extends Component {
                         onChange={this.handleChange}
                         required
                     />
-
-                    <input
-                        type="password"
-                        name="password_confirmation"
-                        placeholder="Password confirmation"
-                        value={this.state.password_confirmation}
-                        onChange={this.handleChange}
-                        required
-                    />
-                    <button type="submit">Register</button>
+                <button type="submit">Register</button>
                 </form>
             </div>
         )

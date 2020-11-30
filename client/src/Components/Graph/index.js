@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import CanvasJSreact from "./canvasjs.react";
 import { iex } from "../../utils/iex.js";
 import axios from "axios";
+<<<<<<< HEAD
+=======
+// import { apihelper } from "../../utils/apiHelper.js"
+>>>>>>> 2e210fc7702ee8d4b29493288b74c03be0de0a7a
 // import GraphPartial from "../GraphPartial"
 var CanvasJS = CanvasJSreact.CanvasJS;
 var CanvasJSChart = CanvasJSreact.CanvasJSChart;
@@ -17,7 +21,18 @@ function Graph() {
 
   function gatherInfo() {
     console.log("in gatherInfo");
+    // create a list of results,
+    // props.firstItem for "AAPL"
+    // push aaplResults to list
+    // var resList = [];
+    //  for (var i = 0; i < sizeOfStockList; i++){
+    // queryByHistorical(stockListName).then(res=>{
+    // resList.push({name : stockListName, data:res.data});
+    // })
+    // }
+    // formatData(res);
     queryByHistorical("AAPL").then(aaplResults => {
+      // props.secondItem
       queryByHistorical("TSLA").then(tslaResults =>{
         formatData([
           {
