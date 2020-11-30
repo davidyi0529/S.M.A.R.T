@@ -1,27 +1,38 @@
-// import React from "react";
-// // import Graph from "../Graph"
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import "./style.css";
+import React, { Component } from "react";
+// import React from 'react';
+// import axios from "axios"
+// import Table from "../Components/Table";
+import TableBody from "../TableBody";
+// import List from "../Components/List";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// function Table() {
-//     return (
-//         <div className="Table">
-//             <div className="Container">
-//                 <table className="table mt-5">
-//                     <thead>
-//                         <tr>
-//                             <th >Equity:</th>
-//                             <th >Name:</th>
-//                             <th >Exchange:</th>
-//                             <th >Date:</th>
-//                         </tr>
-//                     </thead>
-//                 </table>
-//             </div>
-//             {/* <Graph
-//                     /> */}
-//         </div >
-//     );
-// }
+class Table extends Component {
 
-// export default Table;
+    render() {
+        return (
+            <div className="Home">
+                <div className="Container">
+                    <table className="table mt-5">
+                        <thead>
+                            <tr>
+                                <th >Symbol</th>
+                                <th >Close</th>
+                                <th >Date</th>
+                                <th >Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <TableBody ticker="AAPL" />
+                            <TableBody ticker="GOOG" />
+                            <TableBody ticker="MSFT" />
+                            <TableBody ticker="TSLA" />
+                        </tbody>
+                    </table>
+                </div>
+            </div >
+        );
+    }
+}
+
+
+    export default Table;
