@@ -1,13 +1,15 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const stocksSchema = new Schema({
-  symbol: { type: String, required: true },
-  companyName: String,
-  exchange: { type: String, required: true },
-  date: { type: Date, default: Date.now },
-  label: Date,
-  close: String
-});
-const Stocks = mongoose.model("Stocks", stockSchema);
 
-module.exports = Stocks;
+const stockSchema = new Schema({
+  symbol: { type: String, required: false },
+  companyname: { type: String, required: false },
+  exchange: { type: String, required: false },
+  date: { type: Date, default: Date.now },
+  label: { type: Date, default: Date.now },
+  close: { type: String, required: false }
+});
+
+const Stock = mongoose.model("Stock", stockSchema);
+
+module.exports = Stock;

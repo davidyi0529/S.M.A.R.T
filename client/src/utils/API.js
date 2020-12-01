@@ -4,7 +4,7 @@ import { iex } from "./iex.js";
 const API = {
 
   getStocks: function(symbol) {
-    return axios.get(`${iex.base_url}/stock/${symbol}/company?&token=${iex.api_token}`)
+    return axios.get(`${iex.base_url}/stock/` + symbol + `/company?chartLast=1&token=${iex.api_token}`)
   },
   // Gets all books
   getDbStock: function() {
@@ -19,12 +19,12 @@ const API = {
     return axios.delete("/api/stocks/" + id);
   },
   // Saves a book to the database
-  addStock: function(symbolData) {
-    return axios.post("/api/books", symbolData);
+  addStock: function(stockData) {
+    return axios.post("/api/stocks", stockData);
   },
 //google api itself
   findStocks: function(symbol) {
-    return axios.get(`${iex.base_url}/stock/${symbol}/company?&token=${iex.api_token}`)
+    return axios.get(`${iex.base_url}/stock/` + symbol + `/company?chartLast=1&token=${iex.api_token}`)
   }
 };
 

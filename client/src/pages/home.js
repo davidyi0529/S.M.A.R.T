@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Graph from "../Components/Graph"
+// import Graph from "../Components/Graph"
 // import React from 'react';
 // import axios from "axios"
 // import Table from "../Components/Table";
-import Table from "../Components/Table";
-// import Results from "../Components/Results";
+import API from '../utils/API'
+// import Table from "../Components/Table";
 import SearchForm from "../Components/SearchForm";
-// import Saved from "../Components/Saved"
-import apiStocks from '../utils/apiStocks'
-import "bootstrap/dist/css/bootstrap.min.css";
+import Results from "../Components/Results";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
 
@@ -20,66 +19,72 @@ function Home() {
   }, []);
 
   const handleFormSubmit = (e) => {
-      const { value } = e.target
-      setSearchState(value)
+    const { value } = e.target
+    setSearchState(value)
   };
 
   const searchStocks = async () => {
-      let holder = [];
-      holder.length = 0;
-      let newStocks = await apiStocks.getStocks(searchState)
-          .then((res) => {
-              return res.data.items;
-          });
-          setStocks(newStocks);
+    let holder = [];
+    holder.length = 0;
+    let newStocks = await API.getStocks(searchState)
+      .then((res) => {
+        return res.data.items;
+      });
+    setStocks(newStocks);
 
-          apiStocks.getDbStock()
-          .then(res => {
-              for (let i = 0; i < res.data.length; i++) {
-                  holder.push(res.data[i].id);
-              }
-              console.log("savestock response: ", res)
-          })
-      console.log("holder: ", holder);
-      setIds(holder);
+    API.getDbStock()
+      .then(res => {
+        for (let i = 0; i < res.data.length; i++) {
+          holder.push(res.data[i].id);
+        }
+        console.log("savestock response: ", res)
+      })
+    console.log("holder: ", holder);
+    setIds(holder);
   };
 
-//   const saveStock = (symbol) => {
-//       const data = {
-//           title: symbol.companyName,
-//           exchange: symbol.exchange,
-//           description: symbol.description,
-//           link: symbol.website,
-//           id: symbol.id
-//       };
+  const saveStock = (stock) => {
+    var image;
+    if (stock.logo === undefined) {
+      image = ""
+    } else {
+      image = stock.logo
+    };
 
-//       apiStocks.addStock(data).then(res => {
-//           console.log("saved", res)
+    const data = {
+      name: stock.name,
+      exchange: stock.exchange,
+      currency: stock.currency,
+      image: image,
+      link: stock.weburl,
+      symbol: stock.ticker
+    };
 
-//       }).then(err => {
-//           console.log("error", err);
+    API.addStock(data).then(res => {
+      console.log("saved", res)
 
-//       });
-//   };
+    }).then(err => {
+      console.log("error", err);
+
+    });
+  };
 
   return (
-    <div className="home">
+    <div className="Home">
       <div className="Container">
-        <SearchForm 
-        handleFormSubmit={handleFormSubmit}
-        searchStocks={searchStocks}
+        <SearchForm
+          handleFormSubmit={handleFormSubmit}
+          searchStocks={searchStocks} />
+        <Results
+          data={stocks}
+          saveStock={saveStock}
         />
-         {/* <Saved
-                data={stocks}
-                saveStock={saveStock}
-            /> */}
-        <Table />
+        {/* <Table /> */}
       </div>
-      <Graph /> 
+      {/* <Graph /> */}
     </div >
   );
 };
-
 
 
 export default Home;

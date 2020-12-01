@@ -1,4 +1,4 @@
 module.exports = {
-    Stocks: require("./stocks")
+    Stock: require("./stock")
   };
   

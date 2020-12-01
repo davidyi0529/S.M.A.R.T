@@ -2,15 +2,13 @@ import React, { useState, useEffect } from "react";
 import CanvasJSreact from "./canvasjs.react";
 import { iex } from "../../utils/iex.js";
 import axios from "axios";
-<<<<<<< HEAD
-=======
 // import { apihelper } from "../../utils/apiHelper.js"
->>>>>>> 2e210fc7702ee8d4b29493288b74c03be0de0a7a
 // import GraphPartial from "../GraphPartial"
 var CanvasJS = CanvasJSreact.CanvasJS;
 var CanvasJSChart = CanvasJSreact.CanvasJSChart;
 //https://canvasjs.com/react-charts/multiseries-chart/
 // we would want to map data
+
 function Graph() {
   const queryURL = `${iex.base_url}/stock/AAPL/chart/5d?token=${iex.api_token}`;
   console.log(queryURL)
