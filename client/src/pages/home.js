@@ -78,11 +78,11 @@ function Home() {
         />
       </div>
     </div>
-    <div className="row bg-white">
-      <div className="col">
+    <div className="row justify-content-around">
+      <div className="col-6 bg-success">
         <Table />
        </div>
-       <div className="col">
+       <div className="col-6">
          <Graph />
        </div>
     </div>

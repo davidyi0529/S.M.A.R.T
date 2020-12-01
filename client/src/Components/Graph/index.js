@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CanvasJSreact from "./canvasjs.react";
 import { iex } from "../../utils/iex.js";
 import axios from "axios";
+
+// import { apihelper } from "../../utils/apiHelper.js"
 // import GraphPartial from "../GraphPartial"
 var CanvasJS = CanvasJSreact.CanvasJS;
 var CanvasJSChart = CanvasJSreact.CanvasJSChart;
@@ -15,38 +17,35 @@ function Graph() {
     gatherInfo();
   }, []);
 
-  function gatherInfo() {
-    console.log("in gatherInfo");
-    // create a list of results,
-    // props.firstItem for "AAPL"
-    // push aaplResults to list
-    // var stockList = ["AAPL","TSLA"];
-    // var resList = [];
-    //  for (var i = 0; i < stockList.length; i++){
-    //    console.log(stockList[i]);
-    //    let name = stockList[i];
-    // queryByHistorical(stockList[i]).then(res=>{
-    // resList.push({name : name, data:res.data});
-    // console.log(resList);
-    // })
-    // }
-    // formatData(resList);
-    queryByHistorical("AAPL").then(aaplResults => {
-      console.log(aaplResults);
-      // props.secondItem
-      queryByHistorical("TSLA").then(tslaResults =>{
-        formatData([
-          {
-          name: "appl",
-          data: aaplResults.data
-        },
-          {
-            name: "tsla",
-            data: tslaResults.data
-          }
-        ])
-      })
-    });
+  async function gatherInfo() {
+    // passes in stock names from the data
+    var stockList = ["AAPL","TSLA"]
+    var promiseArr = []
+    var objArr = []
+
+    for (let i = 0; i < stockList.length; i++) {
+      promiseArr.push(queryByHistorical(stockList[i]));
+    }
+    let resList = await Promise.all(promiseArr);
+    console.log(resList);
+    for(let i = 0; i< stockList.length; i++){
+      objArr.push({name: stockList[i], data: resList[i].data});
+    }
+    formatData(objArr);
+    // queryByHistorical("AAPL").then(aaplResults => {
+    //   queryByHistorical("TSLA").then(tslaResults =>{
+    //     formatData([
+    //       {
+    //       name: "appl",
+    //       data: aaplResults.data
+    //     },
+    //       {
+    //         name: "tsla",
+    //         data: tslaResults.data
+    //       }
+    //     ])
+    //   })
+    // });
     // console.log(dataset1);
     const dataset2 = queryByHistorical("TSLA");
   }
@@ -62,43 +61,50 @@ function Graph() {
     console.log("format data");
     console.log(stockArr);
     const options = {
-      animationEnabled: true,	
-      title:{
+      animationEnabled: true,
+      title: {
         text: "Stocks"
       },
-      axisY : {
-        title: "Value of stock"
+      axisY: {
+        title: "Price"
       },
       toolTip: {
         shared: true
       },
       data: []
+    }
+    let dataSet;
+    stockArr.forEach(symbolResultsObj => {
+      dataSet = {
+        type: "spline",
+        name: symbolResultsObj.name,
+        showInLegend: true,
+        dataPoints: []
+      }
+      symbolResultsObj.data.forEach(stockSnapshot => {
+        dataSet.dataPoints.push(
+          {
+            y: stockSnapshot.close,
+            label: stockSnapshot.date
+          }
+        )
+      })
+      options.data.push(dataSet);
+    });
+    console.log("dataSet:", options);
+    setStockInfo(options);
   }
-  console.log(options);
-  let dataSet;
-  // not going through the below function
-  stockArr.forEach(symbolResultsObj => {
-    console.log(symbolResultsObj);
-    dataSet =  {
-      type: "spline",
-      name: symbolResultsObj.name,
-      showInLegend: true,
-      dataPoints: []   
-     }
-    symbolResultsObj.data.forEach(stockSnapshot =>{
-      console.log(stockSnapshot);
-      dataSet.dataPoints.push(
-        {
-          y : stockSnapshot.close,
-          label : stockSnapshot.date
-        }
-      )
-    })
-    options.data.push(dataSet);
-  });
-  // console.log("dataSet:",options);
-  setStockInfo(options);
-  }
+
+  // call on apihelper from utils
+
+
+  // 1. move api calls to apihelper within utils
+  // 2. create and call on the gatherInfo function within use effect
+  // 3. within gather info have multiple api calss gather info (queryByHistorical)
+  // 4. call formatData within useEffect then setStockInfo
+
+  // const dataPoints = { y: stockInfo.price, label: stockInfo.date }
+
 
   return (
     <>
