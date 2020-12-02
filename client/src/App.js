@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/home";
-import WatchList from "./pages/watchList";
-import MyInvestments from "./pages/myInvestments";
+import Home from "./pages/Home";
+import WatchList from "./pages/WatchList";
+import MyInvestments from "./pages/MyInvestments";
 // import axios from "axios"
 // import Card from "./Components/Card";
 // import List from "./Components/List";
@@ -18,18 +18,10 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
-
-            <Route exact path={["/", "/home"]}>
-              <Home />
-            </Route>
-
-            <Route exact path="/myInvestments">
-              <MyInvestments />
-            </Route>
-
-            <Route exact path="watchList">
-              <WatchList />
-            </Route>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Home" component={Home} />
+            <Route exact path="/MyInvestments" component={MyInvestments} />
+            <Route exact path="/WatchList" component={WatchList} />
           </Switch>
           <Footer />
         </Router>
