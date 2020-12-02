@@ -10,7 +10,7 @@ function MyInvestments() {
         <div className="container mw-100 my-5">
            <div className="row">
               <div className="col-4 mx-5 text-white align-self-center bg-secondary">
-                  <titel><h2>My Investments</h2></titel>
+                  <title><h2>My Investments</h2></title>
                   <p>This page keeps track of stocks you have invested.
                      You can always remove or add it to the watchlist to keep track and away from your investments
                   </p>

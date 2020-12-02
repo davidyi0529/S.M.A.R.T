@@ -1,16 +1,16 @@
 const router = require("express").Router();
-const stockController = require("../../controllers/stocksController")
+const stocksController = require("../../controllers/stocksController")
 
 // Matches with "/api/stock"
 router.route("/")
-  .get(stockController.findAll)
-  .post(stockController.create);
+  .get(stocksController.findAll)
+  .post(stocksController.create);
 
 // Matches with "/api/stock/:id"
 router
   .route("/:id")
-  .get(stockController.findById)
-  .put(stockController.update)
-  .delete(stockController.remove);
+  .get(stocksController.findById)
+  .put(stocksController.update)
+  .delete(stocksController.remove);
 
 module.exports = router;
