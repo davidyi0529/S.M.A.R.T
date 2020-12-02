@@ -32,22 +32,6 @@ function Graph() {
       objArr.push({name: stockList[i], data: resList[i].data});
     }
     formatData(objArr);
-    // queryByHistorical("AAPL").then(aaplResults => {
-    //   queryByHistorical("TSLA").then(tslaResults =>{
-    //     formatData([
-    //       {
-    //       name: "appl",
-    //       data: aaplResults.data
-    //     },
-    //       {
-    //         name: "tsla",
-    //         data: tslaResults.data
-    //       }
-    //     ])
-    //   })
-    // });
-    // console.log(dataset1);
-    const dataset2 = queryByHistorical("TSLA");
   }
 
   function queryByHistorical(symbol) {
