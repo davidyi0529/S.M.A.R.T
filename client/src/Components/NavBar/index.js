@@ -19,9 +19,9 @@ function Navbar() {
                     <li className="nav-item">
                         <Link to="/myinvestments">My Stocks</Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="watchlist">Stock Watchlist</Link>
-                    </li>
+                    </li> */}
                     <li>Log Out</li>
                 </ul>
                 </div>
