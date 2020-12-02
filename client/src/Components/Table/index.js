@@ -15,20 +15,17 @@ class Table extends Component {
                     <table className="table mt-5">
                         <thead>
                             <tr>
-                                <th >SYMBOL</th>
-                                <th >NAME</th>
-                                <th >LAST</th>
-                                <th >CHANGE</th>
-                                <th >SHARE VOLUME</th>
+                                <th >Symbol</th>
+                                <th >Close</th>
+                                <th >Date</th>
+                                <th >Time</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <TableBody ticker="AAPL" companyName="Apple Inc" />
-                            <TableBody ticker="GOOG" companyName="Alphabet Inc" />
-                            <TableBody ticker="MSFT" companyName="Microsoft Corporation" />
-                            <TableBody ticker="TSLA" companyName="Tesla Inc" />
-                            <TableBody ticker="AMZN" companyName="Amazon.com Inc." />
-                            <TableBody ticker="MRNA" companyName="Moderna Inc" />
+                            <TableBody ticker="AAPL" />
+                            <TableBody ticker="GOOG" />
+                            <TableBody ticker="MSFT" />
+                            <TableBody ticker="TSLA" />
                         </tbody>
                     </table>
                 </div>
