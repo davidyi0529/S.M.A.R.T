@@ -8,7 +8,7 @@ function Navbar() {
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <h1 className="p-2 mb-2 ml-3">
-                    <a className="navbar-brand pl-3 px-1" href="/"><h1>Rooster Stock</h1>
+                    <a className="navbar-brand pl-3 px-1" href="/"><h1>SMART</h1>
                     </a>
                 </h1>
                 <div className="collapse navbar-collapse" id="navbarNav">
