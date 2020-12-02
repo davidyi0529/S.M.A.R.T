@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/home";
-import WatchList from "./pages/watchList";
+import WatchList from "./pages/WatchList";
 import MyInvestments from "./pages/myInvestments";
 // import axios from "axios"
 // import Card from "./Components/Card";

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Card from "../Components/Card"
-import DeleteBtn from "../Components/DeleteBtn";
+// import DeleteBtn from "../Components/DeleteBtn";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../Components/List";
+// import { Link } from "react-router-dom";
+// import { List, ListItem } from "../Components/List";
 import { Input, FormBtn } from "../Components/Form";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -95,37 +95,13 @@ class MyInvestments extends Component {
             </form>
           </div>
         </div>
-       <div className="row row justify-content-center">
-         <div className="col-md-3 bg-warning">
-        {this.state.stocks.length ? (
-          <List>
-            {this.state.stocks.map(stock => (
-              <ListItem key={stock._id}>
-                <Link to={"/stocks/" + stock._id}>
                   <strong>
-                    {stock.symbol}
+                  <Card />
                   </strong>
-                </Link>
-                <DeleteBtn onClick={() => this.deleteStock(stock._id)} />
-              </ListItem>
-            ))}
-          </List>
-        ) : (
-            <h3>No Results to Display</h3>
-          )}
-          </div>
-          </div>
           <div className="row my-5">
          <div className="col-md-3 offset-md-3">
  
          </div>
-         <Card />
-         <Card />
-         <Card />
-         <Card />
-         <Card />
-         <Card />
-         <Card />
       </div> 
        </div> 
 
