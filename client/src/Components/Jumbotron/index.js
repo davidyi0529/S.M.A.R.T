@@ -3,10 +3,10 @@ import "./style.css";
 
 function Jumbotron() {
     return(
-        <div class="jumbotron jumbotron-fluid bg-secondary">
+        <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4 text-dark">Rooster Stock</h1>
-    <p class="lead text-white">Stay on top of the stock markets and keep track of your investments</p>
+    <h1 class="display-4 text-dark">SMART</h1>
+    <p class="lead text-white">Stocks Made Accessible Readable and Tolerable</p>
   </div>
 </div>
     )
