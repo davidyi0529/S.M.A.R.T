@@ -11,8 +11,8 @@ class Table extends Component {
     render() {
         return (
             <div className="Home">
-                <div className="Container">
-                    <table className="table mt-5">
+                <div className="Container my-5">
+                    <table className="table my-5">
                         <thead>
                             <tr>
                                 <th >Symbol</th>

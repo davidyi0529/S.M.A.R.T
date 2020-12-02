@@ -8,12 +8,12 @@ function Navbar() {
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <h1 className="p-2 mb-2 ml-3">
-                    <a className="navbar-brand pl-3 px-1" href="/"><h1>Rooster Stock</h1>
+                    <a className="navbar-brand pl-3 px-1" href="/"><h1>SMART</h1>
                     </a>
                 </h1>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-md-auto ">
-                    <li className="nav-item">
+                    <li className="nav-item text-light bg-dark">
                         <Link to="/home">Current Stocks</Link>
                     </li>
                     <li className="nav-item">
