@@ -1,70 +1,181 @@
-# Getting Started with Create React App
+<img src="https://raw.githubusercontent.com/davidyi0529/Portfolio_D/main/public/mylogo.ico" width="80" height="80" alt="alt text" title="David Yi">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
 
-## Available Scripts
+# Smart-Stocks_D
 
-In the project directory, you can run:
+<br />
 
-### `npm start`
+![Languages](https://img.shields.io/github/languages/top/davidyi0529/Smart-Stocks_D)
+<br />
+![Last Commit](https://img.shields.io/github/last-commit/davidyi0529/Smart-Stocks_D)
+<br />
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Link to the App Repo 
+- https://github.com/davidyi0529/Smart-Stocks_D
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Link to Deployed App
+- https://smart-stocks-d.herokuapp.com/
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Smart-Stocks_D is a stock investment tracker made with React.
 
-### `npm run build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshots of application:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://github.com/davidyi0529/Smart-Stocks_D/blob/main/assets/homepage.png?raw=true" width="800" height="600">
+<img src="https://github.com/davidyi0529/Smart-Stocks_D/blob/main/assets/myinvestments.png?raw=true" width="800" height="600">
+<img src="https://github.com/davidyi0529/Smart-Stocks_D/blob/main/assets/watchlist.png?raw=true" width="800" height="600">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br />
+<br />
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br />
+<br />
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Table of Contents
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Installation](#installation)
+- [Technologies](#technologies)
+- [Credits](#credits)
+- [Support](#support)
+- [License](#license)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br />
+<br />
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br />
+<br />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
 
-### Code Splitting
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. To run the application locally, first clone this repository with the following command.
 
-### Analyzing the Bundle Size
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+ git clone https://github.com/davidyi0529/Smart-Stocks_D.git
+```
 
-### Making a Progressive Web App
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Next, install the application dependencies inside the Smart-Stocks_D directory.
 
-### Advanced Configuration
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm install
+```
 
-### Deployment
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. Start the application.
 
-### `npm run build` fails to minify
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
+```
+
+<br />
+<br />
+
+---
+
+<br />
+<br />
+
+## Technologies
+
+<br />
+<br />
+
+The following were used for this project.
+
+- `React`
+- `NodeJS`
+- `React-Bootstrap`
+- `Passport`
+- `axios`
+- `Javascript`
+- `HTML5`
+- `CSS`
+
+<br />
+<br />
+
+---
+
+<br />
+<br />
+
+## Credits
+
+<br />
+
+<table>
+<tr>
+<td align="center"><a href="https://bootcamp.berkeley.edu/coding/"><img src="https://trilogyed--c.na35.content.force.com/servlet/servlet.ImageServer?id=01541000003WWHu&amp;oid=00D410000006puJ&amp;lastMod=1527713228000" width="100px;" alt=""/><br /><sub><b>UCB-Coding-Bootcamp</b></sub></a><br /></td>
+<td align="center"><a href="https://nodejs.org/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/220px-Node.js_logo.svg.png" width="100px;" alt=""/><br /><sub><b>Node.js</b></sub></a><br /></td>
+<td align="center"><a href="https://reactjs.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png" width="100px;" alt=""/><br /><sub><b>React.js</b></sub></a><br /></td>
+<td align="center"><a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-social-logo.png" width="100px;" alt=""/><br /><sub><b>Bootstrap</b></sub></a><br /></td>
+<td align="center"><a href="http://www.passportjs.org/"><img src="https://avatars1.githubusercontent.com/u/1160530?s=280&v=4" width="100px;" alt=""/><br /><sub><b>Passport JS</b></sub></a><br /></td>
+<td align="center"><a href="https://www.npmjs.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/220px-Npm-logo.svg.png" width="100px;" alt=""/><br /><sub><b>npm</b></sub></a><br /></td>
+<td align="center"><a href="https://www.javascript.com/"><img src="https://p1.hiclipart.com/preview/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clipart.jpg" width="100px;" alt=""/><br /><sub><b>Javascript</b></sub></a><br /></td>
+<td align="center"><a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" width="100px;" alt=""/><br /><sub><b>HTML5</b></sub></a><br /></td>
+<td align="center"><a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/120px-CSS3_logo_and_wordmark.svg.png" width="100px;" alt=""/><br /><sub><b>CSS</b></sub></a><br /></td>
+<td align="center"><a href="https://shields.io/"><img src="https://versioneye.files.wordpress.com/2014/05/screen-shot-2014-05-14-at-22-37-29.png" width="100px;" alt=""/><br /><sub><b>Shields.io</b></sub></a><br /></td>
+</tr>
+</table>
+
+<br />
+<br />
+
+---
+
+<br />
+<br />
+
+## Support
+
+<br />
+
+Reach out to me at one of the following places!
+
+## David Yi 
+
+
+[![Portfolio](https://img.shields.io/badge/portfolio-8B89CC?&style=for-the-badge)](https://davidyi0529.github.io/Updated-Portfolio_D/)
+<br />
+[![GitHub](https://img.shields.io/badge/github-%23100000.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/davidyi0529)
+<br />
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](http://www.linkedin.com/in/davidyi0529)
+
+<br />
+<br />
+
+---
+
+<br />
+<br />
+
+## License
+
+<br />
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
+<br />
+
+Copyright &copy; All rights reserved.
+
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
